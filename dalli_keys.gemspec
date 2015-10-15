@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
-  s.name        = 'dallikeys'
-  s.version     = '0.0.4'
+  s.name        = 'dalli_keys'
+  s.version     = '0.0.5'
   s.date        = '2015-08-14'
   s.summary     = 'DalliKeys'
   s.description = 'DalliKeys extends Dalli with tools to get key information'
