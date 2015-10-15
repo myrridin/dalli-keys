@@ -1,7 +1,7 @@
 require_relative 'dalli_keys/dalli_key'
 
 module DalliKeys
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
 
   def self.version
     VERSION
@@ -54,6 +54,16 @@ module Dalli
         DalliKeys.get_keys_on_host(host, port)
       end
       keys.flatten
+    end
+  end
+end
+
+module ActiveSupport
+  module Cache
+    class DalliStore
+      def keys
+        with(&:keys)
+      end
     end
   end
 end
